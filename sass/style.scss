@@ -1,0 +1,350 @@
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+$colour-grey: #f6f6f6;
+
+//responsive for tablets
+@media screen and (min-width: 768px) {
+}
+
+html,
+body {
+  max-width: 376px;
+  height: 100%;
+  min-height: 100%;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+}
+
+.container{
+  position: relative;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+
+  &__previous {
+    i {
+      right: 55px;
+      margin: auto;
+    }
+  }
+
+  &__logo {
+    margin: auto;
+  }
+}
+
+.search-form {
+  width: 100%;
+  background-color: #e5e5e5;
+  height: 40px;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 auto;
+
+  &__icon {
+    margin: auto;
+  }
+
+  &__input {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100px;
+  }
+}
+
+/*presentation*/
+.presentation {
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  background-color: $colour-grey;
+  padding-top: 15px;
+
+  h1 {
+    font-weight: bold;
+    margin: 0 auto auto 30px;
+  }
+
+  &__btn {
+    width: 200px;
+    height: 60px;
+    background-color: $colour-secondary;
+    border-radius: 90px;
+    margin-bottom: 50px;
+    color: white;
+  }
+}
+
+/*nav*/
+.nav {
+  height: max-content;
+  h2 {
+    margin: auto 30px;
+  }
+
+  &__list {
+    display: block;
+    list-style-type: none;
+
+    &__card {
+      width: 300px;
+      background-color: $colour-grey;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 20px auto;
+
+      &__number {
+        width: 20px;
+        height: 20px;
+        border-radius: 90px;
+        background-color: $colour-primary;
+        color: white;
+        margin-right: 20px;
+        text-align: center;
+      }
+
+      i {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+/* main */
+.main {
+  background-color: #e5e5e5;
+  margin: 50px auto 0 auto;
+  width: 100%;
+  height: 1200px;
+  padding-top: 30px;
+
+  h2 {
+    margin: 15px auto 30px 20px;
+  }
+
+  .figure {
+    height: 250px;
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+
+    &__img {
+      width: 100%;
+      height: 200px;
+      border-radius: 15px;
+      text-decoration: none;
+      color: black;
+
+      .new {
+        position: absolute;
+        padding: 7px 10px;
+        margin: 10px 0 0 240px;
+        background-color: #99e2d0;
+        border-radius: 5px;
+        color: #2c9c81;
+      }
+
+      img {
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 175px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &__infos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      section {
+        width: 75%;
+
+        h3,
+        p {
+          margin: 5px auto 0 10px;
+        }
+      }
+
+      &__icon {
+        width: 20%;
+        display: table;
+        margin: auto 0 auto auto;
+
+        i {
+          vertical-align: middle;
+          display: table-cell;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+//pages
+.image {
+  width: 100%;
+  height: 200px;
+  border: 1px black solid;
+  margin: auto;
+  z-index: 0;
+
+  img {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+//restaurant
+.restaurant {
+  background-color: $colour-grey;
+  height: max-content;
+  margin: 0 auto;
+  width: 376px;
+  border-radius: 15px 15px 0 0;
+
+  &__description {
+    display: inline-block;
+    margin: 30px auto 10px auto;
+    width: 100%;
+
+    h1 {
+      font-weight: bold;
+      margin: auto 20px;
+      font-family: "Shrikhand", cursive;
+      float: left;
+    }
+
+    i {
+      margin: 15px;
+      float: right;
+    }
+  }
+
+  section {
+    h2 {
+      margin: auto 20px;
+      font-family: Shrikhand;
+    }
+
+    .bar {
+      height: 2px;
+      width: 50px;
+      background-color: #99e2d0;
+      border: 1px #99e2d0 solid;
+      border-radius: 30px;
+      margin: auto 20px;
+    }
+
+    .menu {
+      background-color: white;
+      width: 90%;
+      box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      margin: 30px auto 30px auto;
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+
+      .details {
+        width: 80%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+          "text1 ."
+          "text2 price";
+        p {
+          margin: auto 10px;
+        }
+
+        p :nth-last-child(3) {
+          float: right;
+          color: purple;
+        }
+      }
+
+      .order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #99e2d0;
+        border-radius: 0 12px 12px 0;
+        color: white;
+        width: 20%;
+        overflow: hidden;
+        transition: width 400ms ease-in-out;
+
+        i {
+          margin: auto;
+        }
+      }
+    }
+  }
+  button {
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 190px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;
+    margin: 30px auto 30px auto;
+    height: 50px;
+  }
+}
+//footer
+.footer {
+  background-color: #353535;
+  width: 100%;
+  height: 250px;
+  display: inline-block;
+  margin: auto;
+  color: green;
+  position: absolute;
+  bottom: 0;
+
+  h4 {
+    margin: 30px auto auto 45px;
+    font-family: "Shrikhand", cursive;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  &__links {
+    margin: 15px 0;
+
+    li {
+      display: block;
+      margin-top: 15px;
+
+      i {
+        color: white;
+        margin-right: 15px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
