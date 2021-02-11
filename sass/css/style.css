@@ -1,13 +1,22 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
 html,
 body {
   max-width: 376px;
-  height: 100%;
-  min-height: 100%;
   margin: auto;
+  border: 1px black solid;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -15,43 +24,32 @@ body {
 }
 
 .header {
-  height: 80px;
+  height: 50px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
 }
-
 .header__previous i {
   right: 55px;
   margin: auto;
 }
-
 .header__logo {
   margin: auto;
 }
 
 .search-form {
   width: 100%;
-  background-color: #e5e5e5;
+  background-color: #EDEDED;
   height: 40px;
   text-align: center;
   padding-top: 15px;
   margin: 0 auto;
 }
-
 .search-form__icon {
   margin: auto;
 }
-
 .search-form__input {
   background: none;
   border: none;
@@ -63,61 +61,47 @@ body {
 /*presentation*/
 .presentation {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: #F2F2F2;
   padding-top: 15px;
+  margin: auto;
 }
-
 .presentation h1 {
   font-weight: bold;
   margin: 0 auto auto 30px;
 }
-
 .presentation__btn {
   width: 200px;
-  height: 60px;
+  height: 50px;
   background-color: #ff79da;
   border-radius: 90px;
+  border: none;
   margin-bottom: 50px;
   color: white;
 }
 
 /*nav*/
 .nav {
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
+  margin: 25px auto;
 }
-
-.nav h2 {
+.nav__title {
   margin: auto 30px;
 }
-
 .nav__list {
   display: block;
   list-style-type: none;
 }
-
 .nav__list__card {
   width: 300px;
   background-color: #f6f6f6;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   margin: 20px auto;
 }
-
 .nav__list__card__number {
   width: 20px;
   height: 20px;
@@ -127,7 +111,6 @@ body {
   margin-right: 20px;
   text-align: center;
 }
-
 .nav__list__card i {
   margin-right: 20px;
 }
@@ -137,32 +120,27 @@ body {
   background-color: #e5e5e5;
   margin: 50px auto 0 auto;
   width: 100%;
-  height: 1200px;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
 }
-
-.main h2 {
-  margin: 15px auto 30px 20px;
+.main__title {
+  margin: 50px auto auto 30px;
 }
-
-.main .figure {
+.main__figure {
   height: 250px;
   width: 90%;
-  margin: 20px auto;
-  background-color: white;
+  margin: 50px auto;
   border-radius: 15px;
   position: relative;
 }
-
-.main .figure__img {
+.main__figure__img {
   width: 100%;
   height: 200px;
   border-radius: 15px;
-  text-decoration: none;
-  color: black;
 }
-
-.main .figure__img .new {
+.main__figure__img .new {
   position: absolute;
   padding: 7px 10px;
   margin: 10px 0 0 240px;
@@ -170,49 +148,32 @@ body {
   border-radius: 5px;
   color: #2c9c81;
 }
-
-.main .figure__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.main__figure__img img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 175px;
+  height: 170px;
   width: 100%;
   margin: 0 auto;
 }
-
-.main .figure__infos {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.main__figure__infos {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
 }
-
-.main .figure__infos section {
-  width: 75%;
+.main__figure__infos .infos {
+  display: block;
+  width: 80%;
 }
-
-.main .figure__infos section h3,
-.main .figure__infos section p {
-  margin: 5px auto 0 10px;
-}
-
-.main .figure__infos__icon {
+.main__figure__infos .icon {
   width: 20%;
   display: table;
   margin: auto 0 auto auto;
 }
-
-.main .figure__infos__icon i {
+.main__figure__infos .icon i {
   vertical-align: middle;
   display: table-cell;
   text-align: center;
+  width: 30px;
+  height: 30px;
 }
 
 .image {
@@ -222,161 +183,139 @@ body {
   margin: auto;
   z-index: 0;
 }
-
 .image img {
   height: 200px;
   width: 100%;
 }
 
+/*
 .restaurant {
-  background-color: #f6f6f6;
-  height: -webkit-max-content;
-  height: -moz-max-content;
+  background-color: $colour-grey;
   height: max-content;
   margin: 0 auto;
   width: 376px;
   border-radius: 15px 15px 0 0;
-}
 
-.restaurant__description {
-  display: inline-block;
-  margin: 30px auto 10px auto;
-  width: 100%;
-}
+  &__description {
+    display: inline-block;
+    margin: 30px auto 10px auto;
+    width: 100%;
 
-.restaurant__description h1 {
-  font-weight: bold;
-  margin: auto 20px;
-  font-family: "Shrikhand", cursive;
-  float: left;
-}
+    h1 {
+      font-weight: bold;
+      margin: auto 20px;
+      font-family: "Shrikhand", cursive;
+      float: left;
+    }
 
-.restaurant__description i {
-  margin: 15px;
-  float: right;
+    i {
+      margin: 15px;
+      float: right;
+    }
+  }
 }
+  /*section {
+    h2 {
+      margin: auto 20px;
+      font-family: Shrikhand;
+    }
 
-.restaurant section h2 {
-  margin: auto 20px;
-  font-family: Shrikhand;
-}
+    .bar {
+      height: 2px;
+      width: 50px;
+      background-color: #99e2d0;
+      border: 1px #99e2d0 solid;
+      border-radius: 30px;
+      margin: auto 20px;
+    }
 
-.restaurant section .bar {
-  height: 2px;
-  width: 50px;
-  background-color: #99e2d0;
-  border: 1px #99e2d0 solid;
-  border-radius: 30px;
-  margin: auto 20px;
-}
+    .menu {
+      background-color: white;
+      width: 90%;
+      box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      margin: 30px auto 30px auto;
+      height: 80px;
+      display: flex;
+      flex-direction: row;
 
-.restaurant section .menu {
-  background-color: white;
-  width: 90%;
-  -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  margin: 30px auto 30px auto;
-  height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
+      .details {
+        width: 80%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+          "text1 ."
+          "text2 price";
+        p {
+          margin: auto 10px;
+        }
 
-.restaurant section .menu .details {
-  width: 80%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-      grid-template-areas: "text1 ." "text2 price";
-}
+        p :nth-last-child(3) {
+          float: right;
+          color: purple;
+        }
+      }
 
-.restaurant section .menu .details p {
-  margin: auto 10px;
-}
+      .order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #99e2d0;
+        border-radius: 0 12px 12px 0;
+        color: white;
+        width: 20%;
+        overflow: hidden;
+        transition: width 400ms ease-in-out;
 
-.restaurant section .menu .details p :nth-last-child(3) {
-  float: right;
-  color: purple;
-}
-
-.restaurant section .menu .order {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #99e2d0;
-  border-radius: 0 12px 12px 0;
-  color: white;
-  width: 20%;
-  overflow: hidden;
-  -webkit-transition: width 400ms ease-in-out;
-  transition: width 400ms ease-in-out;
-}
-
-.restaurant section .menu .order i {
-  margin: auto;
-}
-
-.restaurant button {
-  font-weight: bold;
-  font-size: 1.1rem;
-  width: 190px;
-  border: none;
-  border-radius: 50px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
-  color: white;
-  font-size: 1rem;
-  -webkit-box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;
-          box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;
-  margin: 30px auto 30px auto;
-  height: 50px;
-}
-
-.footer {
+        i {
+          margin: auto;
+        }
+      }
+    }
+  }
+  button {
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 190px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;
+    margin: 30px auto 30px auto;
+    height: 50px;
+  }
+}*/
+footer {
   background-color: #353535;
   width: 100%;
   height: 250px;
   display: inline-block;
-  margin: auto;
+  margin: auto 0;
   color: green;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
-
-.footer h4 {
+footer h4 {
   margin: 30px auto auto 45px;
   font-family: "Shrikhand", cursive;
   color: white;
   font-size: 1.5em;
 }
-
-.footer__links {
+footer ul {
   margin: 15px 0;
 }
-
-.footer__links li {
+footer ul li {
   display: block;
   margin-top: 15px;
 }
-
-.footer__links li i {
+footer ul li i {
   color: white;
   margin-right: 15px;
 }
-
-.footer__links li a {
+footer ul li a {
   color: white;
-  text-decoration: none;
 }
+
+/*# sourceMappingURL=style.css.map */

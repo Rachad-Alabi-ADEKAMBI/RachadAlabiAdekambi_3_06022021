@@ -3,19 +3,25 @@ $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-grey: #f6f6f6;
 
-//responsive for tablets
-@media screen and (min-width: 768px) {
+a{
+  text-decoration: none;
+  color: black;
+}
+
+li{
+  list-style: none;
 }
 
 html,
 body {
   max-width: 376px;
-  height: 100%;
-  min-height: 100%;
-  margin: auto;
+  margin: auto ;
+  border: 1px black solid;
   padding: 0;
   box-sizing: border-box;
   font-family: roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .container{
@@ -23,12 +29,12 @@ body {
 }
 
 .header {
-  height: 80px;
+  height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: white;
   align-items: center;
+  margin: auto;
 
   &__previous {
     i {
@@ -44,7 +50,7 @@ body {
 
 .search-form {
   width: 100%;
-  background-color: #e5e5e5;
+  background-color: #EDEDED;
   height: 40px;
   text-align: center;
   padding-top: 15px;
@@ -68,8 +74,9 @@ body {
   width: 100%;
   height: max-content;
   text-align: center;
-  background-color: $colour-grey;
+  background-color: #F2F2F2;
   padding-top: 15px;
+  margin: auto;
 
   h1 {
     font-weight: bold;
@@ -78,9 +85,10 @@ body {
 
   &__btn {
     width: 200px;
-    height: 60px;
+    height: 50px;
     background-color: $colour-secondary;
     border-radius: 90px;
+    border: none;
     margin-bottom: 50px;
     color: white;
   }
@@ -89,7 +97,9 @@ body {
 /*nav*/
 .nav {
   height: max-content;
-  h2 {
+  margin: 25px auto;
+
+  &__title {
     margin: auto 30px;
   }
 
@@ -128,18 +138,19 @@ body {
   background-color: #e5e5e5;
   margin: 50px auto 0 auto;
   width: 100%;
-  height: 1200px;
-  padding-top: 30px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
 
-  h2 {
-    margin: 15px auto 30px 20px;
+  &__title {
+    margin: 50px auto auto 30px;
   }
 
-  .figure {
+  &__figure {
     height: 250px;
     width: 90%;
-    margin: 20px auto;
-    background-color: white;
+    margin: 50px auto;
     border-radius: 15px;
     position: relative;
 
@@ -147,8 +158,6 @@ body {
       width: 100%;
       height: 200px;
       border-radius: 15px;
-      text-decoration: none;
-      color: black;
 
       .new {
         position: absolute;
@@ -160,10 +169,9 @@ body {
       }
 
       img {
-        object-fit: cover;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        height: 175px;
+        height: 170px;
         width: 100%;
         margin: 0 auto;
       }
@@ -172,29 +180,28 @@ body {
     &__infos {
       display: flex;
       flex-direction: row;
-      justify-content: center;
 
-      section {
-        width: 75%;
+      .infos{
+        display: block;
+        width: 80%;
+      }       
 
-        h3,
-        p {
-          margin: 5px auto 0 10px;
-        }
-      }
-
-      &__icon {
+      .icon {
         width: 20%;
         display: table;
         margin: auto 0 auto auto;
+        
 
         i {
           vertical-align: middle;
           display: table-cell;
           text-align: center;
+          width: 30px;
+          height: 30px;
         }
       }
     }
+
   }
 }
 
@@ -213,6 +220,7 @@ body {
 }
 
 //restaurant
+/*
 .restaurant {
   background-color: $colour-grey;
   height: max-content;
@@ -237,8 +245,8 @@ body {
       float: right;
     }
   }
-
-  section {
+}
+  /*section {
     h2 {
       margin: auto 20px;
       font-family: Shrikhand;
@@ -310,16 +318,18 @@ body {
     margin: 30px auto 30px auto;
     height: 50px;
   }
-}
+}*/
 //footer
-.footer {
-  background-color: #353535;
+
+
+footer {
+  background-color:#353535;
   width: 100%;
   height: 250px;
   display: inline-block;
-  margin: auto;
+  margin: auto 0;
   color: green;
-  position: absolute;
+  position: relative;
   bottom: 0;
 
   h4 {
@@ -329,7 +339,7 @@ body {
     font-size: 1.5em;
   }
 
-  &__links {
+  ul {
     margin: 15px 0;
 
     li {
@@ -343,7 +353,6 @@ body {
 
       a {
         color: white;
-        text-decoration: none;
       }
     }
   }
