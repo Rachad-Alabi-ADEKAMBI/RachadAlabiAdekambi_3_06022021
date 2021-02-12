@@ -1,7 +1,7 @@
 $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
-$colour-grey: #f6f6f6;
+$colour-grey: #F2F2F2;
 
 a{
   text-decoration: none;
@@ -12,20 +12,10 @@ li{
   list-style: none;
 }
 
-html,
-body {
-  max-width: 376px;
-  margin: auto ;
-  border: 1px black solid;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: roboto, sans-serif;
-  display: flex;
-  flex-direction: column;
-}
 
 .container{
   position: relative;
+  margin: auto;
 }
 
 .header {
@@ -98,9 +88,9 @@ body {
 .nav {
   height: max-content;
   margin: 25px auto;
-
-  &__title {
-    margin: auto 30px;
+  text-align: center;
+h2 {
+    margin: auto; 
   }
 
   &__list {
@@ -134,7 +124,7 @@ body {
 }
 
 /* main */
-.main {
+.figures {
   background-color: #e5e5e5;
   margin: 50px auto 0 auto;
   width: 100%;
@@ -147,7 +137,12 @@ body {
     margin: 50px auto auto 30px;
   }
 
-  &__figure {
+  .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    &__figure {
     height: 250px;
     width: 90%;
     margin: 50px auto;
@@ -155,14 +150,14 @@ body {
     position: relative;
 
     &__img {
-      width: 100%;
+      width: 250px;
       height: 200px;
       border-radius: 15px;
 
       .new {
         position: absolute;
         padding: 7px 10px;
-        margin: 10px 0 0 240px;
+        margin: 10px 0 0 150px;
         background-color: #99e2d0;
         border-radius: 5px;
         color: #2c9c81;
@@ -172,7 +167,7 @@ body {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         height: 170px;
-        width: 100%;
+        width: 250px;
         margin: 0 auto;
       }
     }
@@ -202,6 +197,7 @@ body {
       }
     }
 
+    }
   }
 }
 
@@ -209,44 +205,65 @@ body {
 .image {
   width: 100%;
   height: 200px;
-  border: 1px black solid;
   margin: auto;
-  z-index: 0;
 
   img {
     height: 200px;
     width: 100%;
+    margin: auto auto 0 auto;
   }
 }
 
 //restaurant
-/*
+
 .restaurant {
   background-color: $colour-grey;
   height: max-content;
   margin: 0 auto;
-  width: 376px;
+  width: 100%;
   border-radius: 15px 15px 0 0;
+  position: relative;
+  text-align: center;
 
-  &__description {
-    display: inline-block;
-    margin: 30px auto 10px auto;
-    width: 100%;
+  .menu{
+    width: 80%;
+    margin: auto;
 
-    h1 {
+    &__heading {
+      display: flex;
+      flex-direction: row;
+      margin: 30px auto;
+      width: 100%;
+
+      &__title {
       font-weight: bold;
-      margin: auto 20px;
+      margin: auto 30px;
       font-family: "Shrikhand", cursive;
       float: left;
+     }
+
+      i {
+      margin: auto 15px auto auto;
+      float: right;
+      font-size: 1.5em;
+      cursor: pointer;
+      }
+
+      i:hover{
+        color: $colour-primary;
+      }
     }
 
-    i {
-      margin: 15px;
-      float: right;
+    &__title{
+    margin: auto 10px;
     }
-  }
-}
-  /*section {
+    /*
+    .menu__card {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    margin: 30px auto ;
+
     h2 {
       margin: auto 20px;
       font-family: Shrikhand;
@@ -260,51 +277,68 @@ body {
       border-radius: 30px;
       margin: auto 20px;
     }
-
-    .menu {
-      background-color: white;
+    */
+    .menu__card {
       width: 90%;
       box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
       margin: 30px auto 30px auto;
-      height: 80px;
+      height: 70px;
       display: flex;
       flex-direction: row;
+      background: white;
+      overflow: hidden;
+      text-align: left;
+     
 
-      .details {
-        width: 80%;
+      &__details{
+        width: 100%;
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-areas:
-          "text1 ."
-          "text2 price";
-        p {
-          margin: auto 10px;
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "name price"
+        "supplements price";
+
+        .name{
+          grid-area: name;
+          margin: auto auto auto 15px;
         }
 
-        p :nth-last-child(3) {
-          float: right;
-          color: purple;
+        .supplements{
+          grid-area: supplements;
+          margin: auto auto auto 15px;
+        }
+
+        .price{
+          grid-area: price;
+          margin: auto 15px auto auto;
         }
       }
 
-      .order {
+      &__btn {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #99e2d0;
         border-radius: 0 12px 12px 0;
         color: white;
-        width: 20%;
-        overflow: hidden;
-        transition: width 400ms ease-in-out;
-
-        i {
-          margin: auto;
-        }
+        transition: 400ms ease-in-out;
+        margin: auto;
+        height: 100%;
+        width: 0;
+        cursor: pointer;
+          i {
+            margin: auto;    
+          }
+      }  
+      &__btn:hover{
+        width: 70px;
       }
-    }
+    }  
   }
+
   button {
     font-weight: bold;
     font-size: 1.1rem;
@@ -315,11 +349,11 @@ body {
     color: white;
     font-size: 1rem;
     box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;
-    margin: 30px auto 30px auto;
+    margin:auto;
     height: 50px;
   }
-}*/
-//footer
+}
+
 
 
 footer {
@@ -327,10 +361,11 @@ footer {
   width: 100%;
   height: 250px;
   display: inline-block;
-  margin: auto 0;
+  margin: auto;
   color: green;
   position: relative;
   bottom: 0;
+  text-align: center;
 
   h4 {
     margin: 30px auto auto 45px;

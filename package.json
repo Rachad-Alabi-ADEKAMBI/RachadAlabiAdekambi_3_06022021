@@ -1,0 +1,19 @@
+{
+  "name": "rachadalabiadekambi_3_06022021",
+  "version": "1.0.0",
+  "description": "this is my third project as a web developper student at OpenClassrooms. The goal is to code a mockup of an app made for ordering food(like uber eats). the languages used are HTML and CSS with the SASS prepocessor.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./sass/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "RachadAlabiAdekambi_3_06022021"
+  },
+  "author": "rachad-alabi-adekambi",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "npm:undefined@*"
+  },
+  "devDependencies": {}
+}
