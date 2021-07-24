@@ -1,0 +1,500 @@
+$purple: #FB7BF0;
+$green: #99E2D0;
+$grey: #E5E5E5;
+$grey-light: #F2F2F2;
+$black: #333333;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+html, body{
+box-sizing: border-box;
+display: block;
+font-size: 18px;
+font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background-color: $grey;
+
+    .header{
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        margin: auto auto 0 auto;
+
+        img{
+            margin: auto;
+        }
+    }
+
+    .search-form{
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        background-color: $grey;
+        margin: auto auto 0 auto;
+
+        &__icon{
+            margin: 30px auto;
+            i{
+                font-size: 15px;
+                margin: auto;
+            }
+        }
+
+        &__input{
+            color: $grey;
+            margin: 15px auto;
+            background-color: $grey;
+            font-weight: 700;
+            width: 100px;
+        }
+    }
+
+    .presentation{
+        background-color: $grey-light;
+        width: 100%;
+        display: block;
+        text-align: center;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 5px;
+
+        &__title{
+            font-weight: bold;
+            margin: 10px auto;
+        }
+
+        &__text{
+            font-weight: 200;
+            margin: 50px auto;
+        }
+
+        &__btn{
+            background-color: $purple;
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            color: white;
+            margin: 20px auto;
+            
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .nav{
+        background-color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &__title{
+           font-weight: bold;
+           text-align: left;
+           margin-left: 50px;
+       }
+
+       &__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        background-color: red;
+        justify-content: space-between;
+        margin: 20px auto 20px auto;
+        background-color: white;
+
+           &__card{
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               list-style: none;
+               width: 300px;
+               margin: 10px auto;
+               height: 50px;
+               border-radius: 30px;
+               
+
+               &__number,
+               i,
+                &__text{
+                    display: table-cell;
+                    margin: 10px;
+                    vertical-align: middle;
+                }
+
+                &__number{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50px;
+                    background-color: $purple;
+                    color: white;
+                    margin: 10px;
+                    text-align: center;
+                }
+
+                i{
+                    margin: auto 10px auto 10px;
+                }
+           }
+       }
+    }
+
+    .figures{
+        display: block;
+        background-color: $grey;
+
+        &__title{
+            margin: 20px auto 20px auto;
+            font-weight: bold;          
+        }
+
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &__figure{
+               
+                display: block;
+                width: 250px;
+                height: 200px;
+                border-radius: 50px;
+                margin: auto;
+
+                &__img{
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    width: 300px;
+                    border-radius: 50px;
+
+                    .new{
+                        position: absolute;
+                        top: -140px;
+                        right: 15px;
+                        background-color: $green;
+                        height: 20px;
+                        width: 100px;
+
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 150px;
+                    }
+
+                    .main__figure__infos{
+                        background-color: white;
+                        display: grid;
+                        height: 60px;
+                        grid-template-areas: 
+                        "food-name food-icon"
+                        "food-description food-icon";
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+
+                        h3{
+                            font-weight :bold;
+                            font-weight: 100;
+                            grid-area: food-name;
+                            margin: 0 auto 0 10px;
+                        }
+
+                        p{
+                            font-weight: 100;
+                            grid-area:food-description;
+                            margin: 0 auto auto 10px;
+                        }
+
+                        .icon{
+                            margin: auto 5px;
+                            grid-area: food-icon;
+
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*pages*/
+    .image{
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+        z-index: 0;
+
+        img{
+            height: 250px;
+            width: 100%;
+        }
+    }
+
+    .restaurant{
+        display: block;
+        background-color: $grey-light;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        z-index: 99;
+        text-align: center;
+        
+        .content{
+            display: block;
+            width: 800px;
+            margin: auto;  
+            
+            &__heading{
+                display: table;
+                width: 100% ;
+                height: 30px;
+                
+                &__title{
+                    float: left;
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-family: "Shrikhand", cursive, sans-serif;
+                    font-size: 1.7em;
+                    margin: 30px auto auto 30px;          
+                }
+                
+                i{
+                    float: right;
+                    display: table-cell;
+                    font-size: 30px;
+                    margin: 40px auto;
+                }
+            }
+            
+            .menu{
+                &__title{
+                    float: left;
+                    font-size: 18px;
+                    color: black;
+                }
+    
+                &__title-line{
+                    height: 5px;
+                    width: 150px;
+                    background-color: rgb(122, 199, 122);
+                    margin: -10px auto;
+                    border: 1px solid black;
+                }             
+                    
+                &__card{
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 15px;
+                    margin: 15px auto;
+                    height: 80px;
+                    width: 100%;
+                    justify-content: space-between;
+    
+                    &__details{
+                        background-color: white;
+                        height: 80px;
+                        width: 100%;
+                        border-radius: 15px;
+                        display: grid;
+                        cursor: pointer;
+                        grid-template-columns: 1fr*2;
+                        grid-template-rows: 1fr*2;
+                        grid-template-areas: 
+                        "nom ."
+                        "supplements price";
+    
+                        h3{
+                            grid-area: nom;
+                            text-align: left;
+                            margin: 10px auto auto 15px;
+                            font-weight: bolder;
+                            font-size: 21px;
+                        }
+    
+                        .supplements{
+                            grid-area: supplements;
+                            text-align: left;
+                            margin: 0px auto 15px 15px;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        
+                        .price{
+                            grid-area: price;
+                            font-weight: bold;
+                            margin: auto 10px 20px auto;
+                            font-size: 17px;
+                        }
+                    }              
+    
+                    &__check-btn{
+                        width: 0;
+                        background-color: #99E2D0;
+                        border-radius: 5px;
+                        display: none;
+    
+                        .fa-check-circle{
+                            font-size: 25px;
+                            margin: 25px auto;
+                            display: none;
+                        }
+                    }
+                }
+    
+                &__card:hover{
+                    &__details{
+                        width: 90%;
+                    }
+    
+                .menu__card__check-btn{
+                        width: 60px;
+                        display: block;
+                        cursor: pointer;
+                       
+                        .fa-check-circle{
+                            display: block;
+                        }
+                    }
+                }
+
+                &__btn{
+                    height: 50px;
+                    width: 200px;
+                    font-size: 16px;
+                    background-color: $purple;
+                    color: white;
+                    border-radius: 30px;
+                    margin: 20px auto;
+                    border: none;
+                    font-weight: bold;
+                }
+            }    
+        }
+    }
+}
+    .footer{
+        background-color: $black;
+        display: block;
+        margin: 50px auto 0 auto;
+        text-align: center;
+    
+        &__home-link{
+            text-decoration: none;
+            margin: auto;
+    
+            h4{
+                color: white;
+                font-size: 30px;
+                margin: 20px auto;
+            }
+        }
+    
+        &__links{
+            li{
+                display: block;
+                margin: 5px auto;
+                font-size: 16px;
+    
+                i{
+                    color: white;
+                }
+    
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+/*responsive for 1024px*/
+@media screen and (min-width: 1024px) {
+    .container{
+        text-align: center;
+
+        &__title{
+            margin: auto;
+        }
+
+        .nav{
+            text-align: center;
+            margin: auto;
+
+            &__list{
+                width: 100%;
+
+                &__card{
+                    margin: 10px 20px auto 20px;
+                    width: 250px;
+                }
+               
+            }
+        }
+
+        .figures{
+            .main{
+                justify-content: center;
+
+                &__figure{
+                    margin: 30px 20px auto 20px;
+                }
+            }
+        }
+    }
+}
+
+/*responsive for 768px*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        .nav{
+            &__list{
+                flex-direction: column;
+            }
+        }
+
+        .figures{
+            .main{
+                flex-direction: column;
+
+                &__figure{
+                    margin: 20px auto;
+                }
+            }
+        } 
+
+        .restaurant{
+            .content{
+                width: 700px ;
+            }
+        }
+
+        .footer{
+            margin: 10px auto;
+        }
+    }
+}
+
+/*responsive for 350px*/
+@media screen and (min-width: 350px) and (max-width: 767px){
+  .container{
+      .nav{
+          &__list{
+              width: 90%;
+              padding-left: 5px;
+          }
+      }
+      .restaurant{
+          .content{
+              width: 340px;
+          }
+      }
+  }
+}
